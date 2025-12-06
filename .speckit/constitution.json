@@ -1,0 +1,188 @@
+{
+  "version": "1.0.0",
+  "framework": "nextjs",
+  "frameworkVersion": "15+",
+  "language": "typescript",
+  "rules": {
+    "projectStructure": {
+      "enabled": true,
+      "directories": {
+        "app": "Next.js App Router directory",
+        "components": "Reusable components",
+        "components/ui": "Base UI components",
+        "components/features": "Feature-specific components",
+        "lib": "Utility functions and helpers",
+        "hooks": "Custom React hooks",
+        "types": "TypeScript type definitions",
+        "constants": "Constants",
+        "styles": "Global styles"
+      },
+      "principles": [
+        "Single Responsibility Principle",
+        "Separation of Concerns",
+        "Reusability"
+      ]
+    },
+    "components": {
+      "enabled": true,
+      "defaultExport": true,
+      "naming": "PascalCase",
+      "structure": [
+        "Imports (external → internal)",
+        "Types/Interfaces",
+        "Component",
+        "Hooks",
+        "Event handlers",
+        "Render"
+      ],
+      "serverComponentDefault": true,
+      "clientComponentDirective": "'use client'",
+      "propsTyping": "required",
+      "conditionalRendering": "prefer-early-return"
+    },
+    "fileNaming": {
+      "components": "PascalCase",
+      "utilities": "camelCase",
+      "types": "PascalCase",
+      "constants": "UPPER_SNAKE_CASE",
+      "folders": "kebab-case"
+    },
+    "typescript": {
+      "enabled": true,
+      "strict": true,
+      "explicitTypes": true,
+      "interfaceForObjects": true,
+      "typeForUnions": true,
+      "sharedTypesLocation": "types/",
+      "propsTyping": "required",
+      "typeGuards": "recommended"
+    },
+    "nextjs": {
+      "appRouter": true,
+      "routeFiles": {
+        "page": "page.tsx",
+        "layout": "layout.tsx",
+        "loading": "loading.tsx",
+        "error": "error.tsx",
+        "notFound": "not-found.tsx",
+        "api": "route.ts"
+      },
+      "dataFetching": {
+        "serverComponents": "async/await",
+        "clientComponents": "useEffect + fetch or SWR/React Query",
+        "caching": "explicit-with-fetch-options"
+      },
+      "imageOptimization": {
+        "component": "next/image",
+        "requiredProps": ["width", "height", "alt"],
+        "priority": "above-the-fold-only"
+      },
+      "linkOptimization": {
+        "component": "next/link",
+        "prefetch": "enabled-by-default"
+      },
+      "dynamicRouting": {
+        "dynamicSegment": "[id]",
+        "catchAll": "[...slug]",
+        "optionalCatchAll": "[[...slug]]"
+      }
+    },
+    "styling": {
+      "framework": "tailwindcss",
+      "approach": "utility-first",
+      "customClasses": "minimal-use-of-apply",
+      "responsive": "mobile-first",
+      "darkMode": "dark: prefix",
+      "cssModules": "only-for-complex-components",
+      "globalStyles": "app/globals.css-only"
+    },
+    "performance": {
+      "codeSplitting": {
+        "enabled": true,
+        "method": "next/dynamic",
+        "loadingState": "required"
+      },
+      "memoization": {
+        "reactMemo": "for-stable-props",
+        "useMemo": "for-expensive-calculations",
+        "useCallback": "for-child-component-functions"
+      },
+      "imageOptimization": {
+        "appropriateSize": true,
+        "priority": "above-the-fold-only",
+        "lazyLoading": "default-when-no-priority"
+      }
+    },
+    "errorHandling": {
+      "errorBoundary": "error.tsx",
+      "userFriendlyMessages": true,
+      "apiErrors": {
+        "clearMessages": true,
+        "appropriateStatusCodes": true,
+        "typeSafeResponses": true
+      }
+    },
+    "codeQuality": {
+      "eslint": {
+        "config": "eslint-config-next",
+        "preCommitCheck": true
+      },
+      "codeReview": {
+        "typeSafety": true,
+        "errorHandling": true,
+        "accessibility": true,
+        "performance": true,
+        "dependencyCleanup": true,
+        "comments": "explain-why-not-what"
+      },
+      "comments": {
+        "complexLogic": "required",
+        "todo": "must-include-reason-and-plan",
+        "jsdoc": "public-apis-only"
+      },
+      "functions": {
+        "maxLength": 50,
+        "maxParameters": 3,
+        "preferObjectParams": true,
+        "preferPureFunctions": true
+      }
+    },
+    "accessibility": {
+      "semanticHTML": true,
+      "altAttributes": "required",
+      "keyboardNavigation": true,
+      "ariaAttributes": "when-appropriate"
+    },
+    "environmentVariables": {
+      "sensitive": ".env.local",
+      "example": ".env.example",
+      "clientPrefix": "NEXT_PUBLIC_"
+    },
+    "apiRoutes": {
+      "restful": true,
+      "appropriateHttpMethods": true,
+      "typeSafe": true
+    }
+  },
+  "checklist": {
+    "newCode": [
+      "Component has single responsibility",
+      "Types are explicitly defined",
+      "Server/Client Component distinction is clear",
+      "Images use next/image",
+      "Links use next/link",
+      "Error handling is implemented",
+      "Accessibility is considered",
+      "Performance optimization is applied",
+      "ESLint rules are followed",
+      "No unnecessary comments"
+    ]
+  },
+  "examples": {
+    "serverComponent": "export default async function Page() { const data = await fetch(...); return <div>{data.title}</div>; }",
+    "clientComponent": "'use client'; import { useState } from 'react'; export default function Component() { const [state, setState] = useState(0); return <button onClick={() => setState(state + 1)}>{state}</button>; }",
+    "imageUsage": "import Image from 'next/image'; <Image src='/hero.jpg' alt='Hero' width={800} height={600} priority />",
+    "linkUsage": "import Link from 'next/link'; <Link href='/about'>About</Link>"
+  }
+}
+
