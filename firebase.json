@@ -6,28 +6,11 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "headers": [
+    "rewrites": [
       {
-        "source": "**/*.pdf",
-        "headers": [
-          {
-            "key": "Content-Type",
-            "value": "application/pdf"
-          },
-          {
-            "key": "Content-Disposition",
-            "value": "attachment"
-          }
-        ]
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   }
 }
-
-
-
-
-
-
-
-

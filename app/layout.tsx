@@ -16,7 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Seong-Jun Kang, PhD | AI & Neuroscience Researcher',
   description:
-    'Academic portfolio of Seong-Jun Kang, PhD - Immunologist and AI researcher working at the interface of brain science, multi-omics, and data-driven therapeutics. Seeking postdoctoral positions.',
+    'Academic portfolio of Seong-Jun Kang, PhD - Immunologist and AI researcher working at the interface of Neuroscience, Deep learning, and Multi-omics (Single cell & Spatial). Seeking postdoctoral positions.',
 };
 
 export default function RootLayout({
