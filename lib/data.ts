@@ -3,7 +3,7 @@ import type { Profile, ResearchInterest } from '@/types/content';
 export const profile: Profile = {
   name: 'Seong-Jun Kang, Ph.D.',
   title: 'AI & Neuroscience Researcher | Postdoc Candidate',
-  bio: `I am an immunologist and AI researcher working at the interface of **brain science, multi-omics, and data-driven therapeutics**. My training began in genetic engineering and immunology, where I focused on **regulatory T cells (Tregs)** and immune tolerance, and later expanded into **single-cell and spatial transcriptomics** to dissect cellular heterogeneity in complex tissues.`,
+  bio: `I am an immunologist and AI researcher working at the interface of **Neuroscience, Deep learning, and Multi-omics (Single cell & Spatial)**. My training began in genetic engineering and immunology, where I focused on **regulatory T cells (Tregs)** and immune tolerance, and later expanded into **single-cell and spatial transcriptomics** to dissect cellular heterogeneity in complex tissues.`,
   currentRole: 'Actively seeking postdoctoral positions in computational immunology and neuroscience.',
   keyProgram: 'FOCUZ - Cognitive function digital health solution, currently in development using vibe coding approach.',
   startup: 'Co-founded a digital healthcare startup that develops tools at the intersection of sleep, cognition, and brain health, building digital biomarkers from real-world data.',

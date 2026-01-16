@@ -52,11 +52,11 @@ export default function ParticleField({ className = '' }: ParticleFieldProps) {
     const velocities = new Float32Array(particleCount * 3);
 
     const colorPalette = [
+      new THREE.Color('#fbbf24'), // yellow
       new THREE.Color('#f97316'), // orange
-      new THREE.Color('#3b82f6'), // blue
-      new THREE.Color('#8b5cf6'), // purple
-      new THREE.Color('#06b6d4'), // cyan
-      new THREE.Color('#10b981'), // emerald
+      new THREE.Color('#fb923c'), // orange-400
+      new THREE.Color('#f472b6'), // pink-400
+      new THREE.Color('#ec4899'), // pink-500
     ];
 
     for (let i = 0; i < particleCount; i++) {

@@ -223,9 +223,9 @@ export default function HomePage() {
 
                 <p className="mb-8 max-w-2xl text-base leading-relaxed text-white/80 lg:text-lg">
                   I am an immunologist and AI researcher working at the interface of{' '}
-                  <span className="font-semibold text-orange-300">brain science</span>,{' '}
-                  <span className="font-semibold text-cyan-300">multi-omics</span>, and{' '}
-                  <span className="font-semibold text-pink-300">data-driven therapeutics</span>.
+                  <span className="font-semibold text-orange-300">Neuroscience</span>,{' '}
+                  <span className="font-semibold text-pink-300">Deep learning</span>, and{' '}
+                  <span className="font-semibold text-cyan-300">Multi-omics (Single cell & Spatial)</span>.
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
