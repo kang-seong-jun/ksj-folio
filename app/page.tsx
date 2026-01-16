@@ -1,26 +1,24 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
-import { 
-  profile, 
-  contactInfo, 
-  education, 
-  publications, 
-  awards, 
-  skills, 
-  researchInterests, 
-  currentActivities,
-  scholarMetrics 
+import {
+  profile,
+  contactInfo,
+  education,
+  publications,
+  awards,
+  skills,
+  researchInterests,
+  scholarMetrics
 } from '@/lib/data';
 
-// Dynamic import for Three.js component (client-side only)
-const ParticleField = dynamic(() => import('@/components/three/ParticleField'), {
+// Dynamic import for background (client-side only)
+const VantaBackground = dynamic(() => import('@/components/three/VantaBackground'), {
   ssr: false,
   loading: () => <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-purple-950/20 to-slate-950" />
 });
@@ -40,8 +38,18 @@ function highlightAuthor(authors: string) {
   });
 }
 
+// Navigation items
+const navItems = [
+  { id: 'about', label: 'About' },
+  { id: 'research', label: 'Research' },
+  { id: 'publications', label: 'Publications' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'contact', label: 'Contact' },
+];
+
 export default function HomePage() {
   const [activeSection, setActiveSection] = useState('about');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Group publications by year
   const publicationsByYear = publications.reduce((acc, pub) => {
@@ -82,119 +90,179 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30 dark:from-slate-950 dark:via-purple-950/10 dark:to-slate-950">
-      {/* Fixed Navigation - Glassmorphism */}
-      <nav className="glass-nav fixed top-0 left-0 right-0 z-50">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-          <button 
+      {/* Floating Navigation - Glassmorphism (PC) */}
+      <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-50 hidden md:block">
+        <div className="glass-floating flex items-center gap-1 rounded-full px-3 py-2 whitespace-nowrap">
+          <button
             onClick={() => scrollToSection('about')}
-            className="text-lg font-bold tracking-tight"
+            className="mr-3 px-4 py-2 text-sm font-bold tracking-tight text-foreground whitespace-nowrap"
           >
             Seong-Jun Kang
           </button>
-          
-          <div className="hidden items-center gap-1 md:flex">
-            {[
-              { id: 'about', label: 'About' },
-              { id: 'research', label: 'Research' },
-              { id: 'publications', label: 'Publications' },
-              { id: 'skills', label: 'Skills' },
-              { id: 'contact', label: 'Contact' },
-            ].map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
-                  activeSection === item.id
-                    ? 'bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg'
-                    : 'text-muted-foreground hover:bg-white/50 hover:text-foreground dark:hover:bg-white/10'
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
 
-          <div className="flex items-center gap-2">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                activeSection === item.id
+                  ? 'bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg'
+                  : 'text-muted-foreground hover:bg-white/50 hover:text-foreground dark:hover:bg-white/10'
+              }`}
+            >
+              {item.label}
+            </button>
+          ))}
+
+          <div className="ml-2 flex items-center gap-2 border-l border-white/20 pl-4">
             <ThemeToggle />
-            <Button asChild size="sm" className="glass hidden sm:flex border-0 bg-gradient-to-r from-orange-500 to-pink-500 text-white hover:opacity-90">
+            <Button asChild size="sm" className="rounded-full border-0 bg-gradient-to-r from-orange-500 to-pink-500 text-white hover:opacity-90">
               <a href={`mailto:${contactInfo.email}`}>
-                Contact Me
+                Contact
               </a>
             </Button>
           </div>
         </div>
       </nav>
 
+      {/* Mobile Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 md:hidden">
+        <div className="glass-nav flex h-16 items-center justify-between px-4">
+          <button
+            onClick={() => scrollToSection('about')}
+            className="text-lg font-bold tracking-tight"
+          >
+            Seong-Jun Kang
+          </button>
+
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            {/* Hamburger Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="glass flex h-10 w-10 items-center justify-center rounded-full"
+              aria-label="Toggle menu"
+            >
+              <svg
+                className="h-5 w-5 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                style={{ transform: mobileMenuOpen ? 'rotate(90deg)' : 'rotate(0deg)' }}
+              >
+                {mobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu Dropdown */}
+        <div
+          className={`glass-card mx-4 mt-2 overflow-hidden rounded-2xl transition-all duration-300 ${
+            mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="p-4 space-y-2">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => {
+                  scrollToSection(item.id);
+                  setMobileMenuOpen(false);
+                }}
+                className={`w-full rounded-xl px-4 py-3 text-left text-sm font-medium transition-all ${
+                  activeSection === item.id
+                    ? 'bg-gradient-to-r from-orange-500 to-pink-500 text-white'
+                    : 'text-muted-foreground hover:bg-white/10'
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
+            <div className="border-t border-white/10 pt-4 mt-4">
+              <Button asChild size="sm" className="w-full rounded-xl border-0 bg-gradient-to-r from-orange-500 to-pink-500 text-white">
+                <a href={`mailto:${contactInfo.email}`}>
+                  Contact Me
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section with 3D Particles */}
       <section id="about" className="relative min-h-screen overflow-hidden pt-16">
-        <ParticleField className="z-0" />
+        <VantaBackground className="z-0" />
         
-        {/* Gradient overlays */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-background/30 to-background" />
+        {/* Gradient overlays - stronger for text visibility */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/40 via-background/50 to-background" />
         
         <div className="relative z-20 mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl flex-col items-center justify-center px-6 py-20">
-          <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-center">
-            {/* Text Content */}
-            <div className="text-center lg:text-left">
-              <div className="glass mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm text-orange-600 dark:text-orange-400">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-75"></span>
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-orange-500"></span>
-                </span>
-                Open to Postdoctoral Opportunities
+          {/* Hero Glass Container */}
+          <div className="glass-hero rounded-3xl p-8 lg:p-12">
+            <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
+              {/* Text Content */}
+              <div className="text-center lg:text-left">
+                <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-orange-500/20 px-4 py-2 text-sm font-medium text-orange-300 ring-1 ring-orange-500/30">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-75"></span>
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-orange-500"></span>
+                  </span>
+                  Open to Postdoctoral Opportunities
+                </div>
+
+                <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+                  <span className="text-white">
+                    {profile.name}
+                  </span>
+                </h1>
+
+                <p className="mb-8 max-w-2xl text-base leading-relaxed text-white/80 lg:text-lg">
+                  I am an immunologist and AI researcher working at the interface of{' '}
+                  <span className="font-semibold text-orange-300">brain science</span>,{' '}
+                  <span className="font-semibold text-cyan-300">multi-omics</span>, and{' '}
+                  <span className="font-semibold text-pink-300">data-driven therapeutics</span>.
+                </p>
+
+                <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
+                  <Button size="lg" asChild className="bg-gradient-to-r from-orange-500 to-pink-500 text-white border-0 shadow-lg hover:shadow-orange-500/25 hover:opacity-90">
+                    <a href="/cv/Seong-Jun_Kang_CV.pdf" download className="gap-2">
+                      <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      Download CV
+                    </a>
+                  </Button>
+                  <Button size="lg" variant="outline" onClick={() => scrollToSection('publications')} className="border-white/20 bg-white/10 text-white hover:bg-white/20">
+                    View Publications →
+                  </Button>
+                </div>
               </div>
 
-              <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
-                <span className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 bg-clip-text text-transparent dark:from-white dark:via-purple-200 dark:to-white">
-                  {profile.name}
-                </span>
-              </h1>
-
-              <p className="mb-6 bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-xl font-medium text-transparent lg:text-2xl">
-                {profile.title}
-              </p>
-
-              <p className="mb-8 max-w-2xl text-base leading-relaxed text-muted-foreground lg:text-lg">
-                I am an immunologist and AI researcher working at the interface of{' '}
-                <span className="font-semibold text-foreground">brain science</span>,{' '}
-                <span className="font-semibold text-foreground">multi-omics</span>, and{' '}
-                <span className="font-semibold text-foreground">data-driven therapeutics</span>.
-              </p>
-
-              <div className="flex flex-wrap justify-center gap-4 lg:justify-start">
-                <Button size="lg" asChild className="bg-gradient-to-r from-orange-500 to-pink-500 text-white border-0 shadow-lg hover:shadow-orange-500/25 hover:opacity-90">
-                  <a href={`mailto:${contactInfo.email}`} className="gap-2">
-                    <span>📧</span> Get in Touch
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" onClick={() => scrollToSection('publications')} className="glass border-white/20 hover:bg-white/20 dark:border-white/10">
-                  View Publications →
-                </Button>
+              {/* Profile Image */}
+              <div className="relative mx-auto lg:mx-0">
+                <div className="glass-photo relative h-[300px] w-[220px] overflow-hidden rounded-2xl sm:h-[350px] sm:w-[260px] lg:h-[400px] lg:w-[300px]">
+                  <Image
+                    src="/images/profile/profile-1.jpg"
+                    alt="Seong-Jun Kang"
+                    fill
+                    sizes="(max-width: 640px) 220px, (max-width: 1024px) 260px, 300px"
+                    className="object-cover object-top"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                </div>
               </div>
-            </div>
-
-            {/* Profile Image */}
-            <div className="relative mx-auto lg:mx-0">
-              <div className="glass-card relative h-[350px] w-[260px] overflow-hidden rounded-3xl sm:h-[400px] sm:w-[300px] lg:h-[480px] lg:w-[360px]">
-                <Image
-                  src="/images/profile/profile-1.jpg"
-                  alt="Seong-Jun Kang"
-                  fill
-                  sizes="(max-width: 640px) 260px, (max-width: 1024px) 300px, 360px"
-                  className="object-cover object-top"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              </div>
-              {/* Decorative glows */}
-              <div className="absolute -bottom-8 -right-8 h-32 w-32 rounded-full bg-orange-500/30 blur-3xl" />
-              <div className="absolute -left-8 -top-8 h-40 w-40 rounded-full bg-purple-500/20 blur-3xl" />
             </div>
           </div>
 
           {/* Scroll indicator */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <button onClick={() => scrollToSection('research')} className="glass rounded-full p-3 text-muted-foreground hover:text-foreground">
+            <button onClick={() => scrollToSection('research')} className="glass rounded-full p-3 text-white/70 hover:text-white">
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
@@ -203,45 +271,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Current Activities */}
-      <section className="relative py-16">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {currentActivities.map((activity, index) => (
-              <div 
-                key={index}
-                className={`glass-card group rounded-2xl p-5 transition-all hover:scale-[1.02] ${
-                  activity.highlight 
-                    ? 'glow-orange ring-1 ring-orange-500/30' 
-                    : 'hover:ring-1 hover:ring-white/20'
-                }`}
-              >
-                <span className="mb-3 block text-2xl">{activity.icon}</span>
-                <h3 className={`mb-1 font-semibold ${activity.highlight ? 'bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent' : ''}`}>
-                  {activity.title}
-                </h3>
-                <p className="text-xs text-muted-foreground">{activity.description}</p>
-                {activity.link && (
-                  <Link href={activity.link} target="_blank" className="mt-2 inline-block text-xs text-orange-500 hover:underline">
-                    Learn more →
-                  </Link>
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a href={contactInfo.links.littly} target="_blank" rel="noopener noreferrer" className="glass rounded-full px-4 py-2 text-sm font-medium transition-all hover:bg-white/20 dark:hover:bg-white/10">
-              🔗 litt.ly/brain
-            </a>
-            <a href={contactInfo.links.googleScholar} target="_blank" rel="noopener noreferrer" className="glass rounded-full px-4 py-2 text-sm font-medium transition-all hover:bg-white/20 dark:hover:bg-white/10">
-              📚 Google Scholar
-            </a>
-            <a href={contactInfo.links.focuz} target="_blank" rel="noopener noreferrer" className="glass rounded-full px-4 py-2 text-sm font-medium transition-all hover:bg-white/20 dark:hover:bg-white/10">
-              📱 FOCUZ App
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* Research Interests */}
       <section id="research" className="py-20">
@@ -536,11 +565,18 @@ export default function HomePage() {
                   Send Email
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild className="glass border-0 hover:bg-white/20 dark:hover:bg-white/10">
-                <a href={contactInfo.links.googleScholar} target="_blank" rel="noopener noreferrer">
-                  Google Scholar
-                </a>
-              </Button>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href={contactInfo.links.littly} target="_blank" rel="noopener noreferrer" className="glass rounded-full px-4 py-2 text-sm font-medium transition-all hover:bg-white/20 dark:hover:bg-white/10">
+                🔗 litt.ly/brain
+              </a>
+              <a href={contactInfo.links.googleScholar} target="_blank" rel="noopener noreferrer" className="glass rounded-full px-4 py-2 text-sm font-medium transition-all hover:bg-white/20 dark:hover:bg-white/10">
+                📚 Google Scholar
+              </a>
+              <a href={contactInfo.links.focuz} target="_blank" rel="noopener noreferrer" className="glass rounded-full px-4 py-2 text-sm font-medium transition-all hover:bg-white/20 dark:hover:bg-white/10">
+                📱 FOCUZ App
+              </a>
             </div>
           </div>
         </div>

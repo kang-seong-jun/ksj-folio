@@ -1,0 +1,33 @@
+{
+  "hosting": {
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "**/*.pdf",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/pdf"
+          },
+          {
+            "key": "Content-Disposition",
+            "value": "attachment"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+
+
+
+
+
+
+
