@@ -333,27 +333,23 @@ export const skills = {
 
 export const researchInterests: ResearchInterest[] = [
   {
-    title: 'Brain dynamics and sleep physiology',
-    description: 'Exploring how sleep and arousal states modulate large-scale brain networks, CSF dynamics, and neurovascular coupling using multimodal neuroimaging.',
+    title: 'AI & Vision Language Models for Medical Imaging',
+    description: 'Applying vision-language models (VLMs) and multimodal foundation models to medical image analysis, including neuroimaging like brain fMRI.',
   },
   {
-    title: 'Neuro-immune interfaces in neurodegeneration',
-    description: 'Understanding how immune cells interact with the brain in Alzheimer\'s disease, aging, and related neurological disorders.',
+    title: 'ML/DL Approaches for Disease State Prediction',
+    description: 'Machine learning and deep learning approaches to predict several disease states from clinical and molecular data.',
   },
   {
-    title: 'Digital biomarkers of sleep and cognition',
-    description: 'Quantifying sleep, attention, and cognitive performance using smartphone/wearable data to monitor brain health over time.',
+    title: 'Multi-omic Approaches for Immunological & Neurological Diseases',
+    description: 'Single cell transcriptomics, spatial transcriptomics, and proteomics (e.g., high-resolution flow cytometry) approaches for immunological and neurological diseases.',
   },
   {
-    title: 'Single-cell and spatial transcriptomics in immunology',
-    description: 'Using high-dimensional profiling to map immune cell states, interactions, and tissue microenvironments in disease.',
+    title: 'Neuroinflammation in Alzheimer\'s Disease',
+    description: 'Neuroinflammation and infiltrated immune cells profiling in Alzheimer\'s disease brain.',
   },
   {
-    title: 'Regulatory T cells and immune tolerance',
-    description: 'Mechanisms by which Tregs maintain immune homeostasis and how their dysfunction contributes to chronic inflammation and neuro-immune disease.',
-  },
-  {
-    title: 'AI-augmented drug discovery and clinical translation',
-    description: 'Applying machine learning and generative AI to multi-omics data, digital phenotypes, and therapeutic design, with a focus on immunology and neurology.',
+    title: 'Regulatory T Cells in Immunological Diseases',
+    description: 'Functionality of immune cells such as regulatory T cells in various immunological diseases.',
   },
 ];
