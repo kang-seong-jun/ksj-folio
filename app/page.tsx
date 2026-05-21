@@ -588,6 +588,9 @@ export default function HomePage() {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Seong-Jun Kang, PhD. All rights reserved.
           </p>
+          <p className="mt-2 text-xs text-muted-foreground/60">
+            v{process.env.NEXT_PUBLIC_APP_VERSION} · Last updated {process.env.NEXT_PUBLIC_BUILD_DATE}
+          </p>
         </div>
       </footer>
     </div>
