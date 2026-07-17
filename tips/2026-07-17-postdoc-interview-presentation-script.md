@@ -9,12 +9,12 @@
 
 ## 1. 전체 발표 개요 (20장 구성)
 
-전체 대본 분량은 약 1,400단어입니다. 비원어민이 편안하게 말하는 속도(분당 95~110단어)로 약 13~14분이 걸리고, 슬라이드 전환과 그래프를 가리키는 시간을 더하면 15분에 맞습니다.
+전체 대본 분량은 약 1,360단어입니다. 비원어민이 편안하게 말하는 속도(분당 95~110단어)로 소리 내어 읽으면 약 12분 30초~14분 20초가 걸립니다. 아래 표의 목표 시간은 슬라이드 전환과 그래프를 가리키는 시간까지 포함한 값으로, 합계 약 14분 40초 — 15분 슬롯 안에 들어갑니다. 리허설에서는 대본 낭독을 13분 30초 안에 끝내는 것을 목표로 하고, 넘으면 부록 E의 우선순위에 따라 슬라이드 13·14·17을 압축하세요.
 
 | # | 슬라이드 | 목적 | 목표 시간 | 단어 수 |
 |---|---|---|---|---|
 | 1 | 제목 · 자기소개 | 첫인상, 이름과 소속 각인 | 0:30 | ~55 |
-| 2 | 발표 순서 (Outline) | 청중에게 지도 제공 | 0:30 | ~65 |
+| 2 | 발표 순서 (Outline) | 청중에게 지도 제공 | 0:30 | ~50 |
 | 3 | 연구 배경 (Big Picture) | 비전공자도 이해할 큰 그림 | 0:45 | ~75 |
 | 4 | 문제 정의 (The Gap) | 기존 연구의 한계 | 0:45 | ~75 |
 | 5 | 핵심 연구 질문 · 가설 | 발표 전체의 축 제시 | 0:45 | ~60 |
@@ -23,7 +23,7 @@
 | 8 | 연구 1 — 방법 | 핵심 설계만 간결하게 | 0:45 | ~70 |
 | 9 | 연구 1 — 핵심 결과 | 가장 중요한 그래프 1개 | 1:00 | ~95 |
 | 10 | 연구 1 — 해석과 연결 | 의미 정리, 연구 2로 연결 | 0:40 | ~55 |
-| 11 | 연구 2 — 목표와 방법 | 메커니즘 규명 도입 | 0:45 | ~60 |
+| 11 | 연구 2 — 목표와 방법 | 메커니즘 규명 도입 | 0:30 | ~50 |
 | 12 | 연구 2 — 핵심 결과 | 가장 강력한 증거 제시 | 1:00 | ~85 |
 | 13 | 연구 2 — 검증 (Robustness) | 결과의 신뢰성 | 0:40 | ~60 |
 | 14 | 연구 3 — 진행 중인 연구 | 확장성, 현재진행형 연구자 인상 | 0:45 | ~65 |
@@ -31,8 +31,8 @@
 | 16 | 학문적 기여 | 개념 · 방법 · 실용 기여 3가지 | 0:45 | ~75 |
 | 17 | 한계와 열린 질문 | 정직함 + 미래 연구로 연결 | 0:35 | ~65 |
 | 18 | 향후 연구 계획 | 단기 · 중기 · 장기 비전 | 1:00 | ~90 |
-| 19 | 지원 연구실과의 적합성 (Fit) | 왜 이 랩인가 — 인터뷰의 핵심 | 0:45 | ~85 |
-| 20 | 요약 · 감사 인사 | 핵심 메시지 반복, 마무리 | 0:30 | ~60 |
+| 19 | 지원 연구실과의 적합성 (Fit) | 왜 이 랩인가 — 인터뷰의 핵심 | 1:00 | ~90 |
+| 20 | 요약 · 감사 인사 | 핵심 메시지 반복, 마무리 | 0:35 | ~60 |
 
 > **구성 논리**: 인터뷰용 잡톡(job talk)은 학회 발표와 다릅니다. 심사위원이 확인하려는 것은 (1) 독립 연구자로서의 스토리(3~15장), (2) 앞으로의 계획(18장), (3) 우리 랩과 맞는가(19장)입니다. 이 세 가지가 모두 들어가도록 설계했습니다.
 
@@ -48,13 +48,15 @@
 >
 > Good morning, everyone. Thank you very much for inviting me today.
 > My name is [이름], and I recently completed my PhD at [대학], where I studied [연구 주제].
-> Today, I will present my research on [핵심 연구 테마], and I will also explain how I hope to continue this work here at [지원 기관명].
+> Today, I will present my research on [핵심 연구 테마].
+> I will also explain how I hope to continue this work here at [지원 기관명].
 
 > **한글 번역**
 >
 > 안녕하세요, 여러분. 오늘 초대해 주셔서 정말 감사합니다.
 > 제 이름은 [이름]이고, 최근 [대학]에서 [연구 주제]를 연구하며 박사 학위를 마쳤습니다.
-> 오늘은 [핵심 연구 테마]에 대한 제 연구를 발표하고, 이 연구를 [지원 기관명]에서 어떻게 이어가고 싶은지도 말씀드리겠습니다.
+> 오늘은 [핵심 연구 테마]에 대한 제 연구를 발표하겠습니다.
+> 또한 이 연구를 [지원 기관명]에서 어떻게 이어가고 싶은지도 말씀드리겠습니다.
 
 💡 **팁**: 첫 문장은 절대 외운 티가 나도 괜찮은 부분입니다. 천천히, 웃으면서 시작하세요. "Good morning"은 시간대에 맞게 "Good afternoon"으로 바꾸세요.
 
@@ -69,16 +71,14 @@
 > Here is the plan for my talk.
 > First, I will explain the background of my research and the main question I want to answer.
 > Then, I will present three studies from my PhD work.
-> After that, I will summarize what these results mean for the field.
-> Finally, I will share my future research plans and how they connect to your department.
+> Finally, I will summarize my contributions and share my future research plans and how they connect to your department.
 
 > **한글 번역**
 >
 > 오늘 발표의 순서입니다.
 > 먼저, 제 연구의 배경과 제가 답하고자 하는 핵심 질문을 설명하겠습니다.
 > 그다음, 박사 과정에서 수행한 세 개의 연구를 발표하겠습니다.
-> 그 후, 이 결과들이 이 분야에 어떤 의미가 있는지 정리하겠습니다.
-> 마지막으로, 저의 향후 연구 계획과 그것이 이 학과와 어떻게 연결되는지 말씀드리겠습니다.
+> 마지막으로, 제 연구의 기여를 정리하고, 향후 연구 계획과 그것이 이 학과와 어떻게 연결되는지 말씀드리겠습니다.
 
 ---
 
@@ -166,7 +166,7 @@
 > My research combines [방법론 A] and [방법론 B].
 > Study 1 asks whether [연구 1의 목표].
 > Study 2 goes deeper and asks why — it examines [연구 2의 목표: 예 — the mechanism behind this effect].
-> Study 3 tests whether the findings hold in [연구 3의 목표: 예 — a real-world setting].
+> Study 3 tests whether the findings also apply to [연구 3의 목표: 예 — a real-world setting].
 > Together, these three studies answer my central question from different angles.
 
 > **한글 번역**
@@ -175,14 +175,14 @@
 > 제 연구는 [방법론 A]와 [방법론 B]를 결합합니다.
 > 연구 1은 [연구 1의 목표]인지를 묻습니다.
 > 연구 2는 더 깊이 들어가 '왜'를 묻습니다 — [연구 2의 목표]를 조사합니다.
-> 연구 3은 이 발견이 [연구 3의 목표]에서도 유지되는지 검증합니다.
+> 연구 3은 이 발견이 [연구 3의 목표]에도 적용되는지 검증합니다.
 > 이 세 연구가 함께 저의 핵심 질문에 서로 다른 각도에서 답합니다.
 
 ---
 
 ### Slide 7 — 연구 1: 배경과 목표 (0:40)
 
-**슬라이드에 넣을 것**: "Study 1" 표시 + 이 연구의 구체적 질문 한 문장.
+**슬라이드에 넣을 것**: "Study 1" 표시 + 이 연구의 구체적 질문 한 문장. 출판된 연구라면 슬라이드 하단에 본인 논문 인용을 작게 표기하세요 (예: [성] et al., [저널명], [연도]) — 결과 슬라이드(9번) 하단에 반복해도 좋습니다.
 
 > **English**
 >
@@ -199,6 +199,8 @@
 > 앞서 말씀드렸듯이, 기존 연구는 [이유] 때문에 이 질문에 답할 수 없었습니다.
 > 그래서 이 연구에서 저는 더 구체적인 질문을 던졌습니다.
 > [연구 1의 세부 질문]?
+
+💡 **팁**: 출판된 연구라면 대본 끝에 한 문장을 추가하세요 — "This work was published in [저널명] in [연도]." (이 연구는 [연도]에 [저널명]에 출판되었습니다.) 포닥 심사위원은 제1저자 논문 실적을 발표 중에 확인하고 싶어 합니다.
 
 ---
 
@@ -237,7 +239,8 @@
 > Now, let me show you the main result of Study 1.
 > This graph shows [x축] on the x-axis and [y축] on the y-axis.
 > The blue bars represent [조건 A], and the gray bars represent [조건 B].
-> As you can see, [조건 A] was significantly higher than [조건 B] — about [핵심 수치: 예 — a 25 percent increase], and this difference was statistically significant.
+> As you can see, [조건 A] was clearly higher than [조건 B] — about [핵심 수치: 예 — a 25 percent increase].
+> This difference was statistically significant.
 > This result was consistent across [반복 검증: 예 — all three datasets].
 > It was also surprising, because [예상과 달랐던 점].
 > In short, this result suggests that [한 문장 결론].
@@ -247,7 +250,8 @@
 > 이제 연구 1의 핵심 결과를 보여드리겠습니다.
 > 이 그래프의 x축은 [x축], y축은 [y축]입니다.
 > 파란 막대는 [조건 A], 회색 막대는 [조건 B]입니다.
-> 보시다시피 [조건 A]가 [조건 B]보다 유의미하게 높았습니다 — 약 [핵심 수치] 정도이며, 이 차이는 통계적으로 유의했습니다.
+> 보시다시피 [조건 A]가 [조건 B]보다 뚜렷하게 높았습니다 — 약 [핵심 수치] 정도였습니다.
+> 이 차이는 통계적으로 유의했습니다.
 > 이 결과는 [반복 검증]에서 일관되게 나타났습니다.
 > 또한 [예상과 달랐던 점] 때문에 놀라운 결과이기도 했습니다.
 > 요약하면, 이 결과는 [한 문장 결론]을 시사합니다.
@@ -278,9 +282,9 @@
 
 ---
 
-### Slide 11 — 연구 2: 목표와 방법 (0:45)
+### Slide 11 — 연구 2: 목표와 방법 (0:30)
 
-**슬라이드에 넣을 것**: "Study 2" 표시 + 연구 1과의 차이를 보여주는 간단한 설계도.
+**슬라이드에 넣을 것**: "Study 2" 표시 + 연구 1과의 차이를 보여주는 간단한 설계도. 출판된 연구라면 슬라이드 하단에 본인 논문 인용을 작게 표기하세요 (예: [성] et al., [저널명], [연도]) — 결과 슬라이드(12번) 하단에 반복해도 좋습니다.
 
 > **English**
 >
@@ -305,18 +309,22 @@
 > **English**
 >
 > Here are the main findings of Study 2.
+> This figure shows [x축] on the x-axis and [y축] on the y-axis.
+> The two colors show [조건 A] and [조건 B].
 > First, [발견 1].
 > Second — and this is the most important point — [발견 2].
-> You can see this clearly in the figure: when [X가 변할 때], [Y가 어떻게 반응하는지].
+> You can see this clearly in the figure: when [X가 변할 때: 예 — the temperature increases], [Y의 반응 — 주어와 동사가 있는 완전한 절: 예 — the signal drops by half].
 > This is strong evidence that [메커니즘/결론].
 > To my knowledge, this is the first study to show [새로운 기여] directly.
 
 > **한글 번역**
 >
 > 연구 2의 주요 발견입니다.
+> 이 그림의 x축은 [x축], y축은 [y축]입니다.
+> 두 색은 각각 [조건 A]와 [조건 B]를 나타냅니다.
 > 첫째, [발견 1]입니다.
 > 둘째 — 그리고 이것이 가장 중요한 포인트인데 — [발견 2]입니다.
-> 그림에서 명확히 보실 수 있습니다: [X가 변할 때], [Y가 어떻게 반응하는지] 나타납니다.
+> 그림에서 명확히 보실 수 있습니다: [X가 변할 때], [Y의 반응: 예 — 신호가 절반으로 줄어듭니다].
 > 이것은 [메커니즘/결론]이라는 강력한 증거입니다.
 > 제가 아는 한, [새로운 기여]를 직접 보여준 것은 이 연구가 처음입니다.
 
@@ -452,7 +460,7 @@
 >
 > Here is my research plan for the next few years.
 > In the short term, within the first year, I want to [단기 프로젝트], which builds directly on my PhD work.
-> In the mid term, I plan to [중기 프로젝트].
+> In the medium term, over the next two to three years, I plan to [중기 프로젝트].
 > This project will need [필요 자원/기술 — 지원 기관이 보유한 것], and that is one of the reasons I am excited about this position.
 > In the long term, my goal is to [장기 비전 한 문장].
 > I have already taken the first steps: [준비 상황: 예 — I have preliminary data / I am preparing a fellowship application].
@@ -461,7 +469,7 @@
 >
 > 앞으로 몇 년간의 제 연구 계획입니다.
 > 단기적으로, 첫 1년 안에는 [단기 프로젝트]를 하고자 합니다. 이는 제 박사 연구를 직접 이어가는 것입니다.
-> 중기적으로는 [중기 프로젝트]를 계획하고 있습니다.
+> 중기적으로는, 앞으로 2~3년에 걸쳐 [중기 프로젝트]를 계획하고 있습니다.
 > 이 프로젝트에는 [필요 자원/기술]이 필요한데, 이것이 제가 이 자리에 큰 기대를 갖는 이유 중 하나입니다.
 > 장기적으로 제 목표는 [장기 비전]입니다.
 > 저는 이미 첫걸음을 떼었습니다: [준비 상황].
@@ -470,7 +478,7 @@
 
 ---
 
-### Slide 19 — 왜 이 연구실인가 (Fit) (0:45) ★ 인터뷰의 핵심 슬라이드
+### Slide 19 — 왜 이 연구실인가 (Fit) (1:00) ★ 인터뷰의 핵심 슬라이드
 
 **슬라이드에 넣을 것**: "내 기술 ↔ 랩의 강점"을 잇는 다이어그램. 지원 랩의 실제 프로젝트명 언급.
 
@@ -496,14 +504,15 @@
 
 ---
 
-### Slide 20 — 요약 · 감사 (0:30)
+### Slide 20 — 요약 · 감사 (0:35)
 
 **슬라이드에 넣을 것**: 핵심 메시지 3줄 + 감사의 말(지도교수, 공동연구자, 펀딩) + 연락처.
 
 > **English**
 >
 > To summarize:
-> I showed that [핵심 발견], I explained the mechanism behind it, and I presented a research plan that connects my work with your group.
+> I showed that [핵심 발견]. I explained the mechanism behind it.
+> Finally, I presented a research plan that connects my work with your group.
 > I would like to thank my advisor, Professor [지도교수], my collaborators, and [펀딩 기관] for their support.
 > Thank you very much for your attention.
 > I am happy to answer your questions.
@@ -511,7 +520,8 @@
 > **한글 번역**
 >
 > 요약하겠습니다.
-> 저는 [핵심 발견]을 보였고, 그 메커니즘을 설명했으며, 제 연구와 여러분의 그룹을 연결하는 연구 계획을 제시했습니다.
+> 저는 [핵심 발견]을 보였습니다. 그리고 그 메커니즘을 설명했습니다.
+> 마지막으로, 제 연구와 여러분의 그룹을 연결하는 연구 계획을 제시했습니다.
 > 지도교수님이신 [지도교수] 교수님, 공동연구자들, 그리고 [펀딩 기관]의 지원에 감사드립니다.
 > 경청해 주셔서 감사합니다.
 > 기쁜 마음으로 질문에 답하겠습니다.
@@ -578,9 +588,9 @@
 
 ## 6. 부록 D — 한국인 발표자를 위한 전달 팁
 
-1. **속도**: 긴장하면 빨라집니다. 연습 때 15분에 맞췄다면, 실전 목표는 "연습보다 10% 느리게"입니다. 문장과 문장 사이에 한 박자 쉬는 것이 가장 쉬운 방법입니다.
+1. **속도**: 긴장하면 빨라집니다. 실전에서는 연습과 같은 속도를 유지하되, 문장과 문장 사이에 한 박자씩 쉬는 것이 가장 쉬운 방법입니다. 단, 대본 낭독 리허설은 반드시 13분 30초 안에 끝나야 합니다. 넘으면 부록 E에 따라 슬라이드 13·14·17을 압축하세요.
 2. **암기 전략**: 대본 전체를 통째로 외우지 마세요. 외울 것은 딱 세 가지입니다 — ① 각 슬라이드의 첫 문장, ② 슬라이드 5의 연구 질문, ③ 마지막 슬라이드. 나머지는 슬라이드 그림을 보며 말하면 됩니다.
-3. **강세 주의 단어** (한국인이 자주 틀리는 강세): sig-NI-fi-cant, hy-PO-the-sis, a-NA-ly-sis, me-CHA-nism(ME-cha-nism), con-tri-BU-tion, pre-LI-mi-na-ry. 발표 전에 사전의 발음 듣기로 확인하세요.
+3. **강세 주의 단어** (한국인이 자주 틀리는 강세): sig-NI-fi-cant, hy-PO-the-sis, a-NA-ly-sis, ME-cha-nism, con-tri-BU-tion, pre-LI-mi-na-ry. 발표 전에 사전의 발음 듣기로 확인하세요.
 4. **숫자 읽기 연습**: "0.05" = "point oh five" 또는 "zero point zero five", "25%" = "twenty-five percent", "n = 120" = "an n of one hundred twenty". 본인 데이터의 숫자를 소리 내어 읽는 연습을 하세요.
 5. **모르는 질문에 침묵하지 않기**: 한국어 습관대로 조용히 생각하면, 영어권 청중은 "답을 못 한다"고 느낍니다. 부록 C의 "Let me think for a moment."를 먼저 말하고 생각하세요.
 6. **리허설**: 최소 3회, 그중 1회는 반드시 영어가 가능한 사람 앞에서. 스마트폰으로 녹화해서 "um, uh"가 몇 번 나오는지 세어 보세요.
@@ -597,7 +607,7 @@
 
 - [ ] 대괄호 `[ ]` 자리를 모두 본인 내용으로 채웠다
 - [ ] 지원 랩의 최근 논문 2~3편을 읽고 슬라이드 19에 반영했다
-- [ ] 전체를 소리 내어 읽고 시간을 쟀다 (목표: 13:30~14:30)
+- [ ] 전체를 소리 내어 읽고 시간을 쟀다 (목표: 12:30~13:30, 초과 시 부록 E대로 압축)
 - [ ] 각 슬라이드 첫 문장을 슬라이드만 보고 말할 수 있다
 - [ ] 예상 질문 10개와 답변을 영어로 준비했다
 - [ ] 백업 슬라이드(방법 세부, 추가 데이터, 통계 상세)를 준비했다
