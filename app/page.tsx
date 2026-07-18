@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
+import ResearchChat from '@/components/features/chat/ResearchChat';
 import {
   profile,
   contactInfo,
@@ -257,6 +258,11 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
                 </div>
               </div>
+            </div>
+
+            {/* Ask about my research */}
+            <div className="mx-auto mt-10 w-full max-w-4xl border-t border-white/10 pt-8">
+              <ResearchChat />
             </div>
           </div>
 
